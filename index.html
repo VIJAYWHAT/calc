@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pip Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, select {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pip Calculator</h2>
+    <label>Select Asset Type:</label>
+    <select id="assetType">
+        <option value="FOREX">Forex</option>
+        <option value="XAUUSD">XAUUSD</option>
+        <option value="BTCUSD">BTCUSD</option>
+        <option value="GBPJPY">GBPJPY</option>
+        <option value="USDCAD">USDCAD</option>
+        <option value="NAS100">NAS100</option>
+    </select><br>
+    <label>Enter Buy Price:</label>
+    <input type="number" id="buyPrice" step="0.0001"><br>
+    <label>Enter Sell Price:</label>
+    <input type="number" id="sellPrice" step="0.0001"><br>
+    <button onclick="calculatePips()">Calculate Pips</button>
+    <h3 id="result"></h3>
+
+    <script>
+        function calculatePips() {
+            let assetType = document.getElementById('assetType').value;
+            let buyPrice = parseFloat(document.getElementById('buyPrice').value);
+            let sellPrice = parseFloat(document.getElementById('sellPrice').value);
+            
+            if (isNaN(buyPrice) || isNaN(sellPrice)) {
+                document.getElementById('result').innerText = "Please enter valid prices.";
+                return;
+            }
+
+            let pips = 0;
+
+            switch (assetType) {
+                case "FOREX":
+                    pips = (sellPrice - buyPrice) * 10000;
+                    break;
+                case "XAUUSD":
+                    pips = (sellPrice - buyPrice) * 10;
+                    break;
+                case "BTCUSD":
+                    pips = (sellPrice - buyPrice);
+                    break;
+                case "GBPJPY":
+                    pips = (sellPrice - buyPrice) * 100;
+                    break;
+                case "USDCAD":
+                    pips = (sellPrice - buyPrice) * 10000;
+                    break;
+                case "NAS100":
+                    pips = (sellPrice - buyPrice) * 10;
+                    break;
+                default:
+                    document.getElementById('result').innerText = "Invalid asset type. Please select a valid option.";
+                    return;
+            }
+
+            document.getElementById('result').innerText = `Pips Value: ${pips.toFixed(2)} pips`;
+        }
+    </script>
+</body>
+</html>
