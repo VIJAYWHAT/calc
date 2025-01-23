@@ -10,15 +10,14 @@
     <h2>Pip Calculator</h2>
     <label>Select Asset Type:</label>
     <select id="assetType">
-        <option value="FOREX">Forex</option>
-        <option value="XAUUSD">XAUUSD</option>
-        <option value="BTCUSD">BTCUSD</option>
-        <option value="GBPJPY">GBPJPY</option>
-        <option value="USDCAD">USDCAD</option>
-        <option value="NAS100">NAS100</option>
+        <option value="BTCUSD">BTCUSD (S-B)</option>
+        <option value="XAUUSD">XAUUSD (.100)</option>
+        <option value="USDJPY">USDJPY (.100)</option>
+        <option value="EURUSD">EURUSD (.10000)</option>
+        <option value="US30">US30(.10)</option>
     </select><br>
     <label>Enter Buy Price:</label>
-    <input type="number" id="buyPrice" step="0.0001"><br>
+    <input type="number" id="buyPrice" step="0.0001"><br> 
     <label>Enter Sell Price:</label>
     <input type="number" id="sellPrice" step="0.0001"><br>
     <button onclick="calculatePips()">Calculate Pips</button>

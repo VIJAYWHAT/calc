@@ -12,23 +12,20 @@ function calculatePips() {
     let pips = 0;
 
     switch (assetType) {
-        case "FOREX":
-            pips = (sellPrice - buyPrice) * 10000;
-            break;
-        case "XAUUSD":
-            pips = (sellPrice - buyPrice) * 10;
-            break;
-        case "BTCUSD":
+        case "BTCUSD": // .00
             pips = (sellPrice - buyPrice);
             break;
-        case "GBPJPY":
+        case "XAUUSD": // .000
+            pips = (sellPrice - buyPrice) * 10;
+            break;
+        case "USDJPY": // .000
             pips = (sellPrice - buyPrice) * 100;
             break;
-        case "USDCAD":
+        case "EURUSD": // .00000
             pips = (sellPrice - buyPrice) * 10000;
             break;
-        case "NAS100":
-            pips = (sellPrice - buyPrice) * 10;
+        case "US30": // .00
+            pips = (sellPrice - buyPrice);
             break;
         default:
             document.getElementById('result').innerText = "Invalid asset type. Please select a valid option.";
