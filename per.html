@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Percentage Calculator</h2>
+        
+        <label>What is <input type="number" id="percent1"> % of <input type="number" id="of1"> ?</label>
+        <button onclick="calculatePercentage()">Calculate</button>
+        <div class="result" id="result1"></div>
+        
+        <label>What percent of <input type="number" id="whole"> is <input type="number" id="part"> ?</label>
+        <button onclick="calculateWhatPercent()">Calculate</button>
+        <div class="result" id="result2"></div>
+        
+        <label>What is the percentage increase/decrease from <input type="number" id="start"> to <input type="number" id="end"> ?</label>
+        <button onclick="calculateIncreaseDecrease()">Calculate</button>
+        <div class="result" id="result3"></div>
+    </div>
+    
+    <script>
+        function calculatePercentage() {
+            let percent = parseFloat(document.getElementById('percent1').value);
+            let of = parseFloat(document.getElementById('of1').value);
+            if (!percent || !of) return;
+            let result = (percent / 100) * of;
+            document.getElementById('result1').textContent = `= ${result}`;
+        }
+
+        function calculateWhatPercent() {
+            let whole = parseFloat(document.getElementById('whole').value);
+            let part = parseFloat(document.getElementById('part').value);
+            if (!whole || !part) return;
+            let result = (part / whole) * 100;
+            document.getElementById('result2').textContent = `= ${result.toFixed(2)}%`;
+        }
+
+        function calculateIncreaseDecrease() {
+            let start = parseFloat(document.getElementById('start').value);
+            let end = parseFloat(document.getElementById('end').value);
+            if (!start || !end) return;
+            let result = ((end - start) / start) * 100;
+            document.getElementById('result3').textContent = `= ${result.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>
