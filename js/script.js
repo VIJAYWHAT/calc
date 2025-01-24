@@ -1,3 +1,18 @@
+// Function to toggle the sidebar's visibility
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const mainContent = document.querySelector(".main-content");
+
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+        mainContent.style.marginLeft = "20px"; // Reset content margin
+    } else {
+        sidebar.style.width = "250px";
+        mainContent.style.marginLeft = "270px"; // Adjust content margin when sidebar is open
+    }
+}
+
+// Function to calculate percentage (Existing function)
 function calculatePercentage() {
     let percent = parseFloat(document.getElementById('percent1').value);
     let of = parseFloat(document.getElementById('of1').value);
@@ -6,6 +21,7 @@ function calculatePercentage() {
     document.getElementById('result1').textContent = `= ${result}`;
 }
 
+// Function to calculate what percent (Existing function)
 function calculateWhatPercent() {
     let whole = parseFloat(document.getElementById('whole').value);
     let part = parseFloat(document.getElementById('part').value);
@@ -14,6 +30,7 @@ function calculateWhatPercent() {
     document.getElementById('result2').textContent = `= ${result.toFixed(2)}%`;
 }
 
+// Function to calculate increase/decrease (Existing function)
 function calculateIncreaseDecrease() {
     let start = parseFloat(document.getElementById('start').value);
     let end = parseFloat(document.getElementById('end').value);
@@ -22,6 +39,7 @@ function calculateIncreaseDecrease() {
     document.getElementById('result3').textContent = `= ${result.toFixed(2)}%`;
 }
 
+// Function to calculate pips (Existing function)
 function calculatePips() {
     let assetType = document.getElementById("assetType").value;
     let buyPrice = parseFloat(document.getElementById("buyPrice").value);

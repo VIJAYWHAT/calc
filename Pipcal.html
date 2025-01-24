@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Navbar with the toggle button on the right -->
+    <div class="navbar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <h1>Pip Calculator</h1>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div id="menu" class="menu">
+            <a href="index.html">Percentage Calculator</a>
+            <a href="Pipcal.html">Pip Calculator</a>
+        </div>
+    </div>
+
+    <div class="main-content">
         <h2>Pip Calculator</h2>
         
         <label>Select Asset Type:</label>
@@ -27,8 +41,6 @@
 
         <button onclick="calculatePips()">Calculate Pips</button>
         <div class="result" id="resultPips"></div>
-
-        <a href="index.html">Go to Profit Calculator</a>
     </div>
 
     <script src="js/script.js"></script>

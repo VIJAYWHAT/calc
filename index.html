@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profit Calculator</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h2>Percentage Calculator</h2>
-      <label
-        >What is <input type="number" id="percent1" /> % of
-        <input type="number" id="of1" /> ?</label
-      >
-      <button onclick="calculatePercentage()">Calculate</button>
-      <div class="result" id="result1"></div>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar with the toggle button on the right -->
+    <div class="navbar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <h1>Profit Calculator</h1>
+    </div>
 
-      <label
-        >What percent of <input type="number" id="whole" /> is
-        <input type="number" id="part" /> ?</label
-      >
-      <button onclick="calculateWhatPercent()">Calculate</button>
-      <div class="result" id="result2"></div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div id="menu" class="menu">
+            <a href="index.html">Percentage Calculator</a>
+            <a href="Pipcal.html">Pip Calculator</a>
+        </div>
+    </div>
 
-      <label
-        >What is the percentage increase/decrease from
-        <input type="number" id="start" /> to
-        <input type="number" id="end" /> ?</label
-      >
-      <button onclick="calculateIncreaseDecrease()">Calculate</button>
-      <div class="result" id="result3"></div>
+    <div class="main-content">
+        <h2>Percentage Calculator</h2>
+        <label>What is <input type="number" id="percent1" /> % of <input type="number" id="of1" /> ?</label>
+        <button onclick="calculatePercentage()">Calculate</button>
+        <div class="result" id="result1"></div>
 
-      <a href="Pipcal.html">Go to Pip Calculator</a>
+        <label>What percent of <input type="number" id="whole" /> is <input type="number" id="part" /> ?</label>
+        <button onclick="calculateWhatPercent()">Calculate</button>
+        <div class="result" id="result2"></div>
+
+        <label>What is the percentage increase/decrease from <input type="number" id="start" /> to <input type="number" id="end" /> ?</label>
+        <button onclick="calculateIncreaseDecrease()">Calculate</button>
+        <div class="result" id="result3"></div>
     </div>
 
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
