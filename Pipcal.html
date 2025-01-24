@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pip Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pip Calculator</h2>
+        
+        <label>Select Asset Type:</label>
+        <select id="assetType">
+            <option value="BTCUSD">BTCUSD (S-B)</option>
+            <option value="XAUUSD">XAUUSD (.100)</option>
+            <option value="USDJPY">USDJPY (.100)</option>
+            <option value="EURUSD">EURUSD (.10000)</option>
+            <option value="US30">US30(.10)</option>
+        </select>
+
+        <label>Enter Buy Price:</label>
+        <input type="number" id="buyPrice" step="0.0001">
+        
+        <label>Enter Sell Price:</label>
+        <input type="number" id="sellPrice" step="0.0001">
+
+        <button onclick="calculatePips()">Calculate Pips</button>
+        <div class="result" id="resultPips"></div>
+
+        <a href="index.html">Go to Profit Calculator</a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
