@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pip Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Profit Calculator</title>
+    <link rel="stylesheet" href="css/pipstyle.css">
 </head>
-<body>
+<body class="pip-calculator">
     <!-- Navbar with the toggle button on the right -->
     <div class="navbar">
-        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
         <h1>Pip Calculator</h1>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     </div>
 
-    <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <div id="menu" class="menu">
             <a href="index.html">Percentage Calculator</a>
             <a href="Pipcal.html">Pip Calculator</a>
         </div>
+        <button class="close-btn" onclick="closeSidebar()">✖</button>
     </div>
 
     <div class="main-content">

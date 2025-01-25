@@ -84,6 +84,7 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Flexbox to align labels and inputs in a row */
 .input-group {
     display: flex;
     align-items: center;
@@ -125,6 +126,27 @@ h2 {
     color: #333;
     font-size: 18px;
 }
+
+/* Adjust input fields layout */
+.main-content label,
+.main-content select,
+.main-content input,
+.main-content button {
+    margin-bottom: 10px;
+    width: 100%; /* Ensure inputs take full width */
+}
+
+/* Optional: Ensure labels and input fields align nicely */
+input[type="number"], select {
+    width: calc(100% - 20px); /* Full width minus padding */
+}
+
+/* Adjusting button size and alignment */
+button {
+    width: auto; /* Let the button size adjust to text */
+    margin-top: 10px;
+}
+
 
 /* Close Button Styling */
 .close-btn {
