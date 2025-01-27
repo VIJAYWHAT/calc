@@ -137,3 +137,26 @@ h2 {
     color: white;
     cursor: pointer;
 }
+
+/* PipCal page UI */
+
+/* Adjust input fields layout */
+.pip-calculator .main-content label,
+.pip-calculator .main-content select,
+.pip-calculator .main-content input,
+.pip-calculator .main-content button {
+  margin-bottom: 10px;
+  width: 100%; /* Ensure inputs take full width */
+}
+
+/* Optional: Ensure labels and input fields align nicely */
+.pip-calculator input[type="number"],
+.pip-calculator select {
+  width: calc(100% - 20px); /* Full width minus padding */
+}
+
+/* Adjusting button size and alignment */
+.pip-calculator button {
+  width: auto; /* Let the button size adjust to text */
+  margin-top: 10px;
+}
