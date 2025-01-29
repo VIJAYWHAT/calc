@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profit Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="css/percentage.css">
 </head>
 <body>
     <!-- Navbar with the toggle button on the right -->
@@ -32,8 +32,8 @@
             <label>% of</label>
             <input type="number" id="of1" placeholder="Number" />
             <button onclick="calculatePercentage()">Calculate</button>
+            <div class="result" id="result1"></div>
         </div>
-        <div class="result" id="result1"></div>
 
         <div class="input-group">
             <label>What percent of</label>
@@ -41,8 +41,8 @@
             <label>is</label>
             <input type="number" id="part" placeholder="Part" />
             <button onclick="calculateWhatPercent()">Calculate</button>
+            <div class="result" id="result2"></div>
         </div>
-        <div class="result" id="result2"></div>
 
         <div class="input-group">
             <label>What is the percentage increase/decrease from</label>
@@ -50,8 +50,8 @@
             <label>to</label>
             <input type="number" id="end" placeholder="End" />
             <button onclick="calculateIncreaseDecrease()">Calculate</button>
+            <div class="result" id="result3"></div>
         </div>
-        <div class="result" id="result3"></div>
     </div>
 
     <script src="js/script.js"></script>
