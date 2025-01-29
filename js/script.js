@@ -1,21 +1,12 @@
 // Function to toggle the sidebar's visibility
 function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    var mainContent = document.querySelector(".main-content");
-
-    if (sidebar.style.width === "0px" || sidebar.style.width === "") {
-        sidebar.style.width = "250px";
-        mainContent.style.marginRight = "250px";
-    } else {
-        sidebar.style.width = "0";
-        mainContent.style.marginRight = "0";
-    }
+    document.getElementById("sidebar").style.right = "0";
 }
 
 function closeSidebar() {
-    document.getElementById("sidebar").style.width = "0";
-    document.querySelector(".main-content").style.marginLeft = "0";
+    document.getElementById("sidebar").style.right = "-250px";
 }
+
 
 // Function to calculate percentage (Existing function)
 function calculatePercentage() {

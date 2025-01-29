@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profit Calculator</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="pip-calculator">
-    <!-- Navbar with the toggle button on the right -->
-    <div class="navbar">
-      <h1>Pip Calculator</h1>
-      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pip Calculator</title>
+    <link rel="stylesheet" href="css/pipcal.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Pip Calculator</h1>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    </nav>
 
-    <div id="sidebar" class="sidebar">
-      <div id="menu" class="menu">
-        <a href="index.html">Percentage Calculator</a>
-        <a href="Pipcal.html">Pip Calculator</a>
-      </div>
-      <button class="close-btn" onclick="closeSidebar()">✖</button>
-    </div>
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">✖</button>
+        <div class="menu">
+            <a href="index.html">Percentage Calculator</a>
+            <a href="pipcal.html">Pip Calculator</a>
+        </div>
+    </aside>
 
-    <div class="main-content">
-      <h2>Pip Calculator</h2>
+    <!-- Main Content -->
+    <main class="main-content">
+        <form class="pip-form">
+          <div class="input-group">
+              <label>Select Asset Type:</label>
+              <select id="assetType">
+                  <option value="BTCUSD">BTCUSD (S-B)</option>
+                  <option value="XAUUSD">XAUUSD (.100)</option>
+                  <option value="USDJPY">USDJPY (.100)</option>
+                  <option value="EURUSD">EURUSD (.10000)</option>
+                  <option value="US30">US30 (.10)</option>
+              </select>
+          </div>
+        
+          <div class="input-group">
+            <label>Enter Buy Price:</label>
+            <input type="number" id="buyPrice" step="0.0001" placeholder="Buy Price" />
+          </div>
 
-      <label>Select Asset Type:</label>
-      <select id="assetType">
-        <option value="BTCUSD">BTCUSD (S-B)</option>
-        <option value="XAUUSD">XAUUSD (.100)</option>
-        <option value="USDJPY">USDJPY (.100)</option>
-        <option value="EURUSD">EURUSD (.10000)</option>
-        <option value="US30">US30(.10)</option>
-      </select>
+          <div class="input-group">
+              <label>Enter Sell Price:</label>
+              <input type="number" id="sellPrice" step="0.0001" placeholder="Sell Price" />
+          </div>
 
-      <label>Enter Buy Price:</label>
-      <input type="number" id="buyPrice" step="0.0001" />
+          <button class="calculate-btn" onclick="calculatePips()">Calculate Pips</button>
 
-      <label>Enter Sell Price:</label>
-      <input type="number" id="sellPrice" step="0.0001" />
-
-      <button onclick="calculatePips()">Calculate Pips</button>
-      <div class="result" id="resultPips"></div>
-    </div>
-
-    <script src="js/script.js"></script>
-  </body>
+          <div class="result" id="resultPips"></div>
+        </form>
+        
+    </main>
+</body>
 </html>
