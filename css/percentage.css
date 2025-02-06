@@ -90,6 +90,7 @@ body {
   padding: 80px 20px;
   text-align: center;
   margin: auto;
+
 }
 
 h2 {
@@ -151,10 +152,14 @@ h2 {
 footer {
   text-align: center;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  width: 100%;
+  position: relative;
+  
 }
 
 /* Responsive */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .main-content {
     display: flex;
     justify-content: center;
@@ -163,5 +168,10 @@ footer {
   }
   .input-group {
     width: 25%;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
   }
 }
