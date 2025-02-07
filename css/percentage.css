@@ -5,15 +5,15 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  background: #1e1e2e; /* Dark Theme */
-  color: #fff;
+  background: #121212; /* Darker background for modern look */
+  color: #e0e0e0; /* Light gray text for better readability */
   overflow-x: hidden;
 }
 
 /* Navbar */
 .navbar {
-  background: rgba(30, 30, 46, 0.9);
-  color: white;
+  background: #1f1f1f; /* Dark gray navbar */
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,16 +29,21 @@ body {
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
+  color: #bb86fc; /* Purple accent color */
 }
 
 .toggle-btn {
   font-size: 28px;
   background: none;
   border: none;
-  color: white;
+  color: #bb86fc; /* Purple accent color */
   cursor: pointer;
   transition: transform 0.3s;
   margin-right: 50px;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
 }
 
 /* Sidebar */
@@ -49,7 +54,7 @@ body {
   height: 100vh;
   padding-top: 80px;
   width: 250px;
-  background: rgba(45, 45, 78, 0.95);
+  background: #1f1f1f; /* Dark gray sidebar */
   transition: 0.4s;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
   z-index: 9999;
@@ -61,17 +66,18 @@ body {
 
 .sidebar .menu a {
   display: block;
-  color: white;
+  color: #e0e0e0; /* Light gray text */
   font-size: 18px;
   padding: 12px;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
 }
 
 .sidebar .menu a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(187, 134, 252, 0.1); /* Light purple hover effect */
   border-radius: 5px;
+  color: #bb86fc; /* Purple accent color */
 }
 
 .close-btn {
@@ -81,8 +87,13 @@ body {
   font-size: 24px;
   background: none;
   border: none;
-  color: white;
+  color: #bb86fc; /* Purple accent color */
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
 }
 
 /* Main Content */
@@ -90,13 +101,13 @@ body {
   padding: 80px 20px;
   text-align: center;
   margin: auto;
-
 }
 
 h2 {
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  color: #bb86fc; /* Purple accent color */
 }
 
 /* Input Fields & Buttons */
@@ -104,16 +115,18 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #1f1f1f; /* Dark gray background */
   padding: 20px;
   border-radius: 8px;
   margin: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Labels */
 .input-group label {
   font-size: 16px;
   font-weight: 500;
+  color: #e0e0e0; /* Light gray text */
 }
 
 /* Inputs */
@@ -122,14 +135,14 @@ h2 {
   font-size: 16px;
   border: 2px solid transparent;
   border-radius: 6px;
-  background: white;
-  color: black;
+  background: #2c2c2c; /* Darker gray input background */
+  color: #e0e0e0; /* Light gray text */
   text-align: center;
   transition: border-color 0.3s;
 }
 
 .input-group input:focus {
-  border-color: #7b1fa2;
+  border-color: #bb86fc; /* Purple accent color */
   outline: none;
 }
 
@@ -137,8 +150,8 @@ h2 {
 .input-group button {
   padding: 12px;
   font-size: 16px;
-  background: #7b1fa2;
-  color: white;
+  background: #bb86fc; /* Purple accent color */
+  color: #121212; /* Dark text for contrast */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -146,16 +159,27 @@ h2 {
 }
 
 .input-group button:hover {
-  background: #9c27b0;
+  background: #9c4dcc; /* Darker purple on hover */
 }
 
+/* Results */
+.result {
+  font-size: 18px;
+  font-weight: 500;
+  color: #bb86fc; /* Purple accent color */
+  margin-top: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
   bottom: 0;
   width: 100%;
   position: relative;
-  
+  background: #1f1f1f; /* Dark gray footer */
+  color: #e0e0e0; /* Light gray text */
+  padding: 10px 0;
 }
 
 /* Responsive */
@@ -164,7 +188,6 @@ footer {
     display: flex;
     justify-content: center;
     padding: 120px 0px;
-    
   }
   .input-group {
     width: 25%;
