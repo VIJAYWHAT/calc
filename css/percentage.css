@@ -89,7 +89,6 @@ body {
 .main-content {
   padding: 80px 20px;
   text-align: center;
-  max-width: 600px;
   margin: auto;
 }
 
@@ -107,7 +106,7 @@ h2 {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 /* Labels */
@@ -150,54 +149,14 @@ h2 {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  /* Input Fields & Buttons */
-  .input-group {
+@media (min-width: 600px) {
+  .main-content {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    justify-content: center;
+    padding: 120px 0px;
+    
   }
-
-  /* Labels */
-  .input-group label {
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  /* Inputs */
-  .input-group input {
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    background: white;
-    color: black;
-    text-align: center;
-    transition: border-color 0.3s;
-  }
-
-  .input-group input:focus {
-    border-color: #7b1fa2;
-    outline: none;
-  }
-
-  /* Buttons */
-  .input-group button {
-    padding: 12px;
-    font-size: 16px;
-    background: #7b1fa2;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .input-group button:hover {
-    background: #9c27b0;
+  .input-group {
+    width: 25%;
   }
 }
