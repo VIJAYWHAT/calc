@@ -14,12 +14,12 @@ body {
 .navbar {
   background: rgba(30, 30, 46, 0.9);
   color: white;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
+  padding: 15px 20px;
   top: 0;
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -47,12 +47,12 @@ body {
   right: -250px;
   top: 0;
   height: 100vh;
+  padding-top: 80px;
   width: 250px;
   background: rgba(45, 45, 78, 0.95);
-  padding-top: 80px;
   transition: 0.4s;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .sidebar .menu {
@@ -146,6 +146,11 @@ h2 {
 
 .input-group button:hover {
   background: #9c27b0;
+}
+
+footer {
+  text-align: center;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
